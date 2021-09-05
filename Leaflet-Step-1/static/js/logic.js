@@ -13,7 +13,7 @@ var earthquakes = new L.LayerGroup();
 
 // Creating my map object
 // Dublin, CA
-var myMap = L.map("map", {
+var mymap = L.map("map", {
   center: [
     37.7159, 121.9101
   ],
@@ -38,3 +38,29 @@ L.control.layers(baseMaps, overlayMaps, {
 var info = L.control({
   position: "bottomright"
 });
+
+var baseMaps = {
+  "Street Map": streetmap,
+  "Satellite": satellite
+};
+
+// Add 'baseMaps' tile layer to the map
+baseMaps.addTo(map);
+
+// Create overlay object
+var overlayMaps = {
+  Earthquakes: earthquakes
+};
+
+
+
+// Perform API call to USGS endpoint
+// All Earthquakes in the past week. Retrieved data on 09-04-2021 
+var link =  "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+
+// Get link data with d3
+d3.json(link, function(response) {
+  console.log(response.features[0])
+
+  
+}
