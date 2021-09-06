@@ -1,4 +1,6 @@
-# leaflet-challenge
+# Leaflet-Challenge
+
+![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 # Detect top trending topics and hashtags
 
@@ -17,7 +19,7 @@
 -   [Credits, tools and other references](#credits-tools-and-other-references)
 
 ## Description
-
+The leaflet challenge project visualizes global earthquakes in real-time. Using an APItakes real-time earthquake feed from the United States Geological Survey (USGS) Earthquakes feed 
 
 
 ## Key Features
@@ -57,13 +59,13 @@ pip install selenium
 ```
 
 ```bash
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-import numpy as np
-from sklearn.ensemble import RandomForestRegressor
-import bs4 import BeautifulSoup
+importÂ pandasÂ asÂ pd
+importÂ matplotlib.pyplotÂ asÂ plt
+importÂ seabornÂ asÂ sns
+fromÂ sklearn.model_selectionÂ importÂ train_test_split
+importÂ numpyÂ asÂ np
+fromÂ sklearn.ensembleÂ importÂ RandomForestRegressor
+importÂ bs4 import BeautifulSoup
 import requests
 import re
 ```
