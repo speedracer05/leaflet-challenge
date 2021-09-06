@@ -5,26 +5,23 @@
 # Detect top trending topics and hashtags
 
 -   [Table of contents](#table-of-contents)
-
 -   [Description](#description)
-
 -   [Key Features](#key-features)
-
 -   [Development Process](#developement-process)
-
 -   [The Output](#the-ouput)
-
 -   [Installation and Usage](#installation-and-usage)
-
 -   [Credits, tools and other references](#credits-tools-and-other-references)
 
-## Description
-The leaflet challenge project visualizes global earthquakes in real-time. Using an APItakes real-time earthquake feed from the United States Geological Survey (USGS) Earthquakes feed 
+![](https://github.com/speedracer05/leaflet-challenge/blob/main/Leaflet-Step-1/images/USGS_global.png)
 
+## Description
+The Leaflet Challenge project visualizes earthquakes around the world in real-time. The project objective was to create a map that plots earthquakes in  real-time, using data from the United States Geological Survey (USGS) Earthquakes feed. For this challenge, I created an interactive tool that visualizes earthquake data for the past 7-days.   
 
 ## Key Features
-
-Key attributes of the project: Instagram, Instagramy, NLTK- SentimentIntensityAnalyzer
+1. Data is updated every minute
+2. Earthquake markers are sized and colored according to magnitude of the earthquake
+3. Map layer tool toggles between street and satellite views
+4. Popups provide detail on the location, time and magnitude when a marker is clicked
 
 ## Development Process
 
