@@ -1,15 +1,18 @@
+// Initialize LayerGroup
+var earthquakes = new L.LayerGroup();
+
 // Perform API call to USGS endpoint
 // All Earthquakes in the past week. Retrieved data on 09-04-2021 
 var getURL =  "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 // Get link data with d3
 d3.json(getURL, function(data) {
-  quakeFeatures(data.features);
+  createFeatures(data.features);
 });
 
-function quakeFeatures(earthquakeData) {
+function createFeatures(earthquakeData) {
 
-  function onQuakeFeature(feature, layer) {
+  function onEachFeature(feature, layer) {
     layer.bindPopup("<h3> Location: " + feature.properties.place +
     "<h3> Magnitude: " + feature.properties.mag +
     "<h3> Depth: " + feature.geometry.coordinates[2] +
@@ -17,7 +20,7 @@ function quakeFeatures(earthquakeData) {
   }
 
   earthquakes = L.geoJSON(earthquakeData, {
-    onQuakeFeature: onQuakeFeature,
+    onEachFeature: onEachFeature,
     pointToLayer: function (feature, latlng) {
       return L.circleMarker(latlng, {
         radius: feature.properties.mag * 4,
@@ -29,19 +32,21 @@ function quakeFeatures(earthquakeData) {
     }
   });
 
-createMap(earthquakes);
+  createMap(earthquakes);
 }
 
 // Create the tile layers for map
 function createMap(earthquakes) {
 
-  var streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-    tileSize: 512
+  var streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+    tileSize: 512,
     maxZoom: 18,
-    id: "light-v10",
+    zoomOffset: -1,
+    id: "mapbox/streets-v11",
+    // "light-v10",
     accessToken: API_KEY
-});
+  });
 
   var satellite = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
@@ -50,20 +55,15 @@ function createMap(earthquakes) {
     accessToken: API_KEY
   });
 
-// Initialize LayerGroup
-var earthquakes = new L.LayerGroup();
-
-// Creating map object
-// Dublin, CA
-var mymap = L.map("map", {
-  center: [
-    37.7159, 121.9101
-  ],
-  zoom: 4,
-  layers: [
-    baseMap,
-    earthquakes]
-});
+  // Creating map object
+  // Dublin, CA
+  var myMap = L.map("map", {
+    center: [
+      37.7159, -121.9101
+    ],
+    zoom: 4,
+    layers: [streetmap, earthquakes]
+  });
 
   var baseMaps = {
     "Street Map": streetmap,
@@ -78,20 +78,17 @@ var mymap = L.map("map", {
     Earthquakes: earthquakes
   };
 
-
   // Create a control for layers, adding overlay layers to it
   L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
-  }).addTo(map);
+  }).addTo(myMap);
 
-  // Create a legend to display information about our map
-  var legend = L.control({
-    position: "bottomright"
-  });
-
-  legend.onAdd = function (map) {
+  // Create a legend to display information about my map
+  var legend = L.control({position: "bottomright"});
+  
+  legend.onAdd = function (myMap) {
     var div = L.DomUtil.create('div', 'info legend'),
-      magnitude = [-10, 10, 30, 50, 70, 90],
+      magnitude = [0, 1, 2, 3, 4, 5],
       labels = [];
 
     for (var i = 0; i < magnitude.length; i++) {
@@ -102,16 +99,24 @@ var mymap = L.map("map", {
     return div;
   };
 
-  legend.addTo(map);
+  legend.addTo(myMap);
+}
+
+  // Selects marker color based on magnitude size
+  // Link source: https://www.freecodecamp.org/news/javascript-switch-statement-with-js-switch-case-example-code/
+  function chooseColor(magnitude) {
+    switch (true) { 
+    case magnitude < 1:
+      return "#F0CE7C";
+    case magnitude < 2:
+      return "#E0AA3D";
+    case magnitude < 3:
+      return "#E18515";
+    case magnitude < 4:
+      return "#FC4E2A";
+    case magnitude < 5:
+      return "#E31A1C";
+    default:
+      return "#B10026";
+    }
   }
-
-  function chooseColor(d) {
-  return d > 90 ? '#a50026' :
-    d > 70 ? '#eb5d3c' :
-      d > 50 ? '#fdc474' :
-        d > 30 ? '#f5f8ac' :
-          d > 10 ? '#a9da70' :
-            '#38a557';
-  }
-
-
