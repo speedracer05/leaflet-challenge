@@ -6,14 +6,12 @@ The Leaflet Challenge project visualizes earthquakes around the world in real-ti
 
 ![](https://github.com/speedracer05/leaflet-challenge/blob/main/Leaflet-Step-1/images/global_map.png)
 
-# Detect top trending topics and hashtags
--   [Table of contents](#table-of-contents)
+# Table of Contents
 -   [Description](#description)
 -   [Key Features](#key-features)
 -   [Development Process](#developement-process)
 -   [The Output](#the-ouput)
--   [Installation and Usage](#installation-and-usage)
--   [Credits, tools and other references](#credits-tools-and-other-references)
+-   [Contact](#contact)
 
 ## Key Features
 1. Data is updated every minute
@@ -22,50 +20,14 @@ The Leaflet Challenge project visualizes earthquakes around the world in real-ti
 4. Popups provide detail on the location, time and magnitude when a marker is clicked
 
 ## Development Process
+A basic `html` page was created and a div map, Leaflet JS and D3 scripts were inserted into the body. Next, a basic style css was written to provide formating for the map and legend. Lastly, I built my map using [Leaflet](https://leafletjs.com/) and [Mapbox](https://docs.mapbox.com/).  
 
-Utilized Python-Jupyter Notebooks, Tableau, & Excel to analyze, visualize, and assess sentiment analysis. 
+The USGS data utilizes a GeoJSON format. Access to their API was achieved by using `d3.json` to read the file and parse the required information for the map, e.g. latitude, longitude, magnitude of the earthquake. I then created two map layers; street map and a satellite map. The maps provide base map options for the earthqauke markers to be overlayed on top. The map was centered to the city of Dublin, where I live. Moving on, control layers were developed for the base map and overlay maps. The finishing touches included the addition of a legend as well as a function to color the earthquake markers based on the magnitude.  
 
 ## The Output
+The whole project is loaded into github.io so it can be viewed over a web browser.
 
-
-
-## Installation and Usage
-Jupyter Notebook:
-Instagramy Library in conjunction with pandas, time
-https://pypi.org/project/instagramy/#Instagram-Post-details 
--Pulled user profile data
--Pulled posts & hashtags
-Wordcloud, Pillow, matplotlib, numpy, collections
-Machine Learning Portion: Utilize Natural Language processing libraries to assess sentiments of each post
-Tried/tested: sklearn model; with GradientBoostRegressor, in conjunction with:Matplotlib, pandas, tensorflow, numpy, re, seaborn, %matplotlib inline
-Nautal Language Processing: Pandas, Spacy, nltk, os, string, nltk.stem - WordNetLemmatizer, nltk.sentiment - SentimentIntensityAnalyzer
-Tableau
-
-
-
-```bash
-Git clone https://github.com/speedracer05/Final_Project.git
-```
-### Install the required libraries.
-```bash
-pip install beautifulsoup4, requests
-pip install requests
-pip install selenium
-```
-
-```bash
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-import numpy as np
-from sklearn.ensemble import RandomForestRegressor
-import bs4 import BeautifulSoup
-import requests
-import re
-```
-
-## Credits, tools and other references
+## Contact
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam et orci
 ultricies ornare. Fusce nec magna aliquet, congue ante in, lobortis augue. Nunc
 hendrerit massa ut risus molestie egestas.
