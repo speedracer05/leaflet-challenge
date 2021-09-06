@@ -11,6 +11,7 @@ The Leaflet Challenge project visualizes earthquakes around the world in real-ti
 -   [Key Features](#key-features)
 -   [Development](#development)
 -   [The Output](#the-ouput)
+-   [Resources](#resources)
 -   [Contact](#contact)
 
 ## Key Features
@@ -28,6 +29,15 @@ The finishing touches included the addition of a legend for the magnitude of the
 
 ## The Output
 The whole project is loaded into github.io so it can be viewed over a web browser.
+
+## Resources
+[USGS GeoJSON Summary](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
+[Mapbox Static Tiles API](https://docs.mapbox.com/api/maps/static-tiles/)
+[Color Palette for Markers](https://www.schemecolor.com/red-sunset.php)
+Used Google Maps to [Select lat-lng Coordinates](https://www.google.com/maps/) to center my map
+[Resloved "404 FAvicon Not Found" Error](https://www.tutsandtips.com/web-design/how-to-fix-404-favicon-not-found-error/)
+[JavaScript: Switch vs. If Else](https://medium.com/@michellekwong2/switch-vs-if-else-1d458e7b0711)
+[JavaScript Swich Statement - With Example Code](https://www.freecodecamp.org/news/javascript-switch-statement-with-js-switch-case-example-code/)
 
 ## Contact
 [John Chan](https://github.com/speedracer05)

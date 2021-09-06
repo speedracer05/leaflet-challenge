@@ -70,9 +70,6 @@ function createMap(earthquakes) {
     "Satellite": satellite
   };
 
-// Add 'baseMap' tile layer to the map
-// baseMap.addTo(map);
-
   // Create overlay object
   var overlayMaps = {
     Earthquakes: earthquakes
@@ -103,6 +100,7 @@ function createMap(earthquakes) {
 }
 
   // Selects marker color based on magnitude size
+  // Link source: https://medium.com/@michellekwong2/switch-vs-if-else-1d458e7b0711
   // Link source: https://www.freecodecamp.org/news/javascript-switch-statement-with-js-switch-case-example-code/
   function chooseColor(magnitude) {
     switch (true) { 
