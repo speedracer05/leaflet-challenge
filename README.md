@@ -9,7 +9,7 @@ The Leaflet Challenge project visualizes earthquakes around the world in real-ti
 # Table of Contents
 -   [Description](#description)
 -   [Key Features](#key-features)
--   [Development Process](#developement-process)
+-   [Development Process](#development-process)
 -   [The Output](#the-ouput)
 -   [Contact](#contact)
 
