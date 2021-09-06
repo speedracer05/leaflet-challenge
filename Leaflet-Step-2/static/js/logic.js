@@ -77,8 +77,8 @@ function createMap(earthquakes) {
   d3.json(tec_platesURL, function(tecData){
     L.geoJSON(tecData,{
   
-    }).addTo(tect)
-    tec_platesURL.addTo(myMap)
+    }).addTo(tec_plates)
+    tec_plates.addTo(myMap)
   })
 
   // Create overlay object
