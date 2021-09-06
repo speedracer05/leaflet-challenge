@@ -1,6 +1,5 @@
 // Initialize LayerGroup
 var earthquakes = new L.LayerGroup();
-var tec_plates = new L.LayerGroup(); // New layer for tectonics
 
 // Perform API call to USGS endpoint
 // All Earthquakes in the past week. Retrieved data on 09-04-2021 
@@ -62,7 +61,7 @@ function createMap(earthquakes) {
     center: [
       37.7159, -121.9101
     ],
-    zoom: 3,
+    zoom: 4,
     layers: [streetmap, earthquakes]
   });
 
@@ -71,20 +70,9 @@ function createMap(earthquakes) {
     "Satellite": satellite
   };
 
-  // Tectonic boundries data
-  // Source: https://github.com/fraxen/tectonicplates
-  var tec_platesURL = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
-  d3.json(tec_platesURL, function(tecData){
-    L.geoJSON(tecData,{
-  
-    }).addTo(tec_plates)
-    tec_plates.addTo(myMap)
-  })
-
   // Create overlay object
   var overlayMaps = {
-    Earthquakes: earthquakes,
-    tectonicsplates: tec_plates
+    Earthquakes: earthquakes
   };
 
   // Create a control for layers, adding overlay layers to it
