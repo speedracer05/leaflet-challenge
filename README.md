@@ -9,7 +9,7 @@ The Leaflet Challenge project visualizes earthquakes around the world in real-ti
 # Table of Contents
 -   [Description](#description)
 -   [Key Features](#key-features)
--   [Development Process](#development-process)
+-   [Development](#development)
 -   [The Output](#the-ouput)
 -   [Contact](#contact)
 
@@ -19,7 +19,7 @@ The Leaflet Challenge project visualizes earthquakes around the world in real-ti
 3. Map layer tool toggles between street and satellite views
 4. Popups provide detail on the location, time and magnitude when a marker is clicked
 
-## Development Process
+## Development
 A basic `html` page was created and a div map, Leaflet JS and D3 scripts were inserted into the body. Next, a basic style css was written to provide formating for the map and legend. Lastly, I built my map using [Leaflet](https://leafletjs.com/) and [Mapbox](https://docs.mapbox.com/).  
 
 The USGS data utilizes a GeoJSON format. Access to their API was achieved by using `d3.json` to read the file and parse the required information for the map, e.g. latitude, longitude, and magnitude of the earthquake. I then created two map layers; street map and a satellite map. The maps provide base map options for the earthquake markers to be overlayed on top. The control layers were created for the base map and overlay maps. 
