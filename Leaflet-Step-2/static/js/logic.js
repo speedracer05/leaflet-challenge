@@ -130,3 +130,4 @@ function createMap(earthquakes) {
       return "#B10026";
     }
   }
+
