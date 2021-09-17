@@ -1,4 +1,5 @@
 # Leaflet-Challenge
+## University of California Davis Data Analytics and Visualization Boot Camp 2021
 
 ![](https://github.com/speedracer05/leaflet-challenge/blob/main/Leaflet-Step-1/images/USGS_logo.png)
 ## Description
