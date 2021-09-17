@@ -5,7 +5,7 @@
 ## Description
 The Leaflet Challenge project visualizes earthquakes around the world in real-time. The project' objective was to create a map that plots earthquakes in real-time, using data from the United States Geological Survey (USGS) Earthquakes feed. For this challenge, I created an interactive tool that visualizes earthquake data for the past 7-days.  
 
-#### Webpage Level 1: [https://speedracer05.github.io/leaflet-challenge/Leaflet-Step-1/](https://speedracer05.github.io/leaflet-challenge/)
+#### Webpage Level 1: [https://speedracer05.github.io/leaflet-challenge/](https://speedracer05.github.io/leaflet-challenge/)
 
 ![](https://github.com/speedracer05/leaflet-challenge/blob/main/Leaflet-Step-2/images/global_map_tec.png)
 
