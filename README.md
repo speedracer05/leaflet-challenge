@@ -1,8 +1,10 @@
 # Leaflet-Challenge
 ## University of California Davis Data Analytics and Visualization Boot Camp 2021
 
-![](https://github.com/speedracer05/leaflet-challenge/blob/main/Leaflet-Step-1/images/USGS_logo.png)
-## Description
+<p align="center">
+<img src="images/global_map.png" width="720">
+</p>
+
 The Leaflet Challenge project visualizes earthquakes around the world in real-time. The project' objective was to create a map that plots earthquakes in real-time, using data from the United States Geological Survey (USGS) Earthquakes feed. For this challenge, I created an interactive tool that visualizes earthquake data for the past 7-days.  
 
 #### Webpage Level 1: [https://speedracer05.github.io/leaflet-challenge/](https://speedracer05.github.io/leaflet-challenge/)
