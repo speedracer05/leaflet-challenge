@@ -1,7 +1,7 @@
 # Leaflet-Challenge
 ## University of California Davis Data Analytics and Visualization Boot Camp 2021
 
-<p align="left">
+<p align="center">
 <img src="images/global_map.png" width="640">
 </p>
 
