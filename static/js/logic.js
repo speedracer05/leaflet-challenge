@@ -99,7 +99,7 @@ function createMap(earthquakes) {
     var div = L.DomUtil.create('div', 'info legend'),
       magnitude = [0, 1, 2, 3, 4, 5],
       labels = [];
-
+      div.innerHTML = '<div>Magnitude Scale</div>';
     for (var i = 0; i < magnitude.length; i++) {
       div.innerHTML +=
         '<i style="background:' + chooseColor(magnitude[i] + 1) + '"></i> ' +
