@@ -27,14 +27,14 @@ The Leaflet Challenge project visualizes earthquakes around the world in real-ti
 5. Tectonic boundries map
 
 ## Development
-A basic `html` page was created and a div map. Leaflet JS and D3 scripts were inserted into the body. Next, a basic style.css was written to provide formating for the map and legend. Lastly, I built my map using [Leaflet](https://leafletjs.com/) and [Mapbox](https://docs.mapbox.com/).  
+A basic `html` page was created, and a div map. Leaflet JS and D3 scripts were inserted into the body. Next, a basic style.css was written to provide formating for the map and legend. Lastly, I built my map using [Leaflet](https://leafletjs.com/) and utilized a [Mapbox](https://docs.mapbox.com/) API to get the map.  
 
-The USGS data utilizes a GeoJSON format. Access to their API was achieved by using `d3.json` to read the file and parse the required information for the map, e.g. latitude, longitude, and magnitude of the earthquake. The GEO information was then used to create the map markers and pop-ups associated with each marker. The pop-ups display metadata about the earthquake; location, magnitude, depth and date. I then created two map layers; street map and a satellite map. The maps provide base map options for the earthquake markers to be overlayed on top. The control layers were created for the base map and overlay maps. 
+The USGS data utilizes GeoJSON formatting. Access to the API was achieved by using `d3.json` to read the file and parse the required information for the map, e.g. latitude, longitude, and magnitude of the earthquake. The GEO information was then used to create the map markers and pop-ups associated with each marker. The pop-ups display metadata about the earthquake; location, magnitude, depth and date. I then created two map layers; street map and a satellite map. The maps provide base map options for the earthquake markers to be overlayed on top. The control layers were created for the base map and overlay maps. 
 
-The finishing touches included the addition of a [tectonic plates layer](http://peterbird.name/oldFTP/PB2002/2001GC000252_readme.txt), which shows the geographic locations of the plats, a legend for the magnitude of the earthquake, as well as a function to color the earthquake markers based on the magnitude.  
+The finishing touches included the addition of a [tectonic plates layer](http://peterbird.name/oldFTP/PB2002/2001GC000252_readme.txt), which shows the geographic locations of the tectonic plates, a legend for the magnitude of the earthquake, as well as a function to color the earthquake markers based on the magnitude.  
 
 ## The Output
-The whole project is loaded to GitHub Pages so it can be viewed over a web browser.
+The whole project was uploaded to GitHub Pages so it can be viewed over a web browser.
 
 ## Resources
 - [USGS GeoJSON Summary](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
